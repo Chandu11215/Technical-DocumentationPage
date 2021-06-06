@@ -1,0 +1,182 @@
+/* ********************
+   BASIC STYLE
+** *******************/
+
+:root {
+    --font-family: 'Fira Sans', sans-serif;
+    --code-font-family: 'Fira Mono', monospace;
+    --line-height: 1.7;
+    --header-margin: 3rem;
+    --p-margin: 2rem;
+    --ul-margin: 1rem;
+    --li-margin: 0.5rem;
+    --main-l-r-padding: 5%;
+    --nav-color: rgb(14, 104, 54);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+  
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+header {
+    margin: var(--header-margin) 0 calc(var(--header-margin) / 2);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main {
+    padding: 0 var(--main-l-r-padding) 2rem;
+    line-height: var(--line-height);
+}
+
+p {
+    margin-top: var(--p-margin);
+    line-height: inherit;
+}
+
+ul {
+    margin-top: var(--ul-margin);
+}
+
+li {
+    margin-top: var(--li-margin);
+}
+
+pre {
+    overflow: auto;
+    line-height: inherit;
+}
+
+ul {
+    padding-left: 2rem;
+}
+
+a {
+    color: #1990b8;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+
+/* ********************
+   NAV STYLE
+** *******************/
+
+.navbar {
+    padding-top: 1px;
+    margin-bottom: var(--p-margin);
+    background-color: var(--nav-color);
+    color: white;
+}
+
+.navbar header {
+    text-align: center;
+}
+
+.navbar ul,
+.nav-link li {
+    padding: 0;
+}
+
+a.nav-link {
+    display: block;
+    border-bottom: 1px solid white;
+    padding: 0.5rem var(--main-l-r-padding);
+    color: white;
+}
+
+a.nav-link:first-child {
+    border-top: 1px solid white;
+}
+
+a.nav-link:focus,
+a.nav-link:hover {
+    text-decoration: none;
+    background-color: white;
+    color: var(--nav-color);
+    border-color: var(--nav-color);
+}
+
+a.nav-link li {
+    list-style-type: none;
+}
+
+@media (min-width: 768px) {
+    #navbar {
+        width: 22%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-right: 1px solid slategrey;
+        overflow: auto;
+    }
+    #main-doc {
+        width: 78%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
+    a.nav-link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media(min-width: 992px) {
+    .main-section > *:not(pre) {
+        width: 80%;
+    }
+}
+
+
+/* ********************
+   MAIN STYLE
+** *******************/
+
+.note {
+    padding: 1rem;
+    border: 1px solid #ffb521;
+    border-left-width: 10px;
+    background-color: #ffd68f;
+}
+
+.section-header {
+    padding: 0.2rem 1.2rem;
+    font-size: 1.6rem;
+    background-color: var(--nav-color);
+    color: white;
+}
+
+/* ********************
+   CUSTOMIZE PRISM STYLE
+** *******************/
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: var(--code-font-family);
+}
+
+pre[class*="language-"] {
+    margin: var(--p-margin) 0;
+}
